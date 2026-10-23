@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaos Capital</title>
+<meta name="description" content="Chaos Capital — 长期主义的科技控股公司，ChaosTech 的控股股东。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230b0d12'/><text x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23c9a96e'>C</text></svg>">
+<style>
+:root{
+  --bg:#0b0d12; --bg2:#11141b; --line:rgba(201,169,110,.18); --line2:rgba(255,255,255,.07);
+  --text:#ece8df; --muted:#9a968c; --gold:#c9a96e; --gold2:#e6cf9f;
+  --serif:"Songti SC","STSong","Noto Serif SC",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:20px;letter-spacing:3px;text-transform:uppercase}
+.logo b{color:var(--gold);font-weight:400}
+.links{display:flex;gap:30px;align-items:center;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--gold2)}
+.lang{border:1px solid var(--line);padding:3px 12px;cursor:pointer;background:none;color:var(--gold);font-size:13px;letter-spacing:1px}
+.lang:hover{background:rgba(201,169,110,.08)}
+
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 500px at 80% 20%,rgba(201,169,110,.10),transparent 60%),
+  repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.025) 119px 120px)}
+.hero .wrap{position:relative;width:100%}
+.kicker{color:var(--gold);font-size:13px;letter-spacing:4px;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:40px;height:1px;background:var(--gold)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.5vw,78px);line-height:1.15;margin:28px 0;letter-spacing:1px}
+h1 em{font-style:normal;color:var(--gold2)}
+.hero p{max-width:560px;color:var(--muted);font-size:clamp(16px,1.8vw,18px)}
+.cta{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{padding:13px 30px;font-size:14px;letter-spacing:1.5px;border:1px solid var(--gold);transition:.25s}
+.btn.p{background:var(--gold);color:#14110b}
+.btn.p:hover{background:var(--gold2)}
+.btn.s{color:var(--gold)}
+.btn.s:hover{background:rgba(201,169,110,.08)}
+
+section{padding:110px 0;border-top:1px solid var(--line2)}
+.head{display:grid;grid-template-columns:260px 1fr;gap:40px;margin-bottom:56px}
+.head .no{font-family:var(--serif);color:var(--gold);font-size:14px;letter-spacing:3px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,40px);line-height:1.3}
+.head p{color:var(--muted);margin-top:16px;max-width:620px}
+@media(max-width:760px){.head{grid-template-columns:1fr;gap:10px}.links a{display:none}}
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pillar{padding:36px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.25s}
+.pillar:hover{background:rgba(201,169,110,.04)}
+.pillar .i{font-family:var(--serif);color:var(--gold);font-size:28px;margin-bottom:18px}
+.pillar h3{font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:10px}
+.pillar p{color:var(--muted);font-size:14.5px}
+
+.holding{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);background:var(--bg2)}
+.holding .l{padding:48px 44px}
+.holding .r{position:relative;min-height:280px;background:#07080f;overflow:hidden;display:grid;place-items:center}
+.holding .r::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(124,92,255,.45),transparent 55%),radial-gradient(circle at 75% 70%,rgba(0,212,255,.35),transparent 55%)}
+.holding .r span{position:relative;font-size:30px;font-weight:800;letter-spacing:-.5px;color:#fff}
+.badge{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--gold);border:1px solid var(--line);padding:3px 10px;margin-bottom:22px}
+.holding h3{font-family:var(--serif);font-weight:400;font-size:30px;margin-bottom:12px}
+.holding p{color:var(--muted);margin-bottom:28px}
+.meta{display:flex;gap:40px;margin-bottom:32px;flex-wrap:wrap}
+.meta div small{display:block;color:var(--muted);font-size:12px;letter-spacing:1.5px}
+.meta div b{font-weight:500;color:var(--gold2)}
+.more{color:var(--gold);font-size:14px;letter-spacing:1px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.more:hover{border-color:var(--gold)}
+@media(max-width:760px){.holding{grid-template-columns:1fr}.holding .l{padding:36px 26px}.holding .r{min-height:180px}}
+
+.contact{text-align:center}
+.contact h2{margin:18px 0}
+.contact p{color:var(--muted);margin-bottom:36px}
+footer{border-top:1px solid var(--line2);padding:30px 0;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s,transform .9s}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#">Chaos <b>Capital</b></a>
+  <div class="links">
+    <a href="#about" data-i18n="nav1">关于</a>
+    <a href="#portfolio" data-i18n="nav2">控股企业</a>
+    <a href="#contact" data-i18n="nav3">联系</a>
+    <button class="lang" id="lang">EN</button>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker reveal">Chaos Capital</div>
+  <h1 class="reveal"><span data-i18n="h1a">在不确定中，</span><br><em data-i18n="h1b">投资确定的未来</em></h1>
+  <p class="reveal" data-i18n="sub">Chaos Capital 是一家专注前沿科技的控股公司，以长期资本和战略支持，陪伴技术企业穿越周期、持续成长。</p>
+  <div class="cta reveal">
+    <a class="btn p" href="#portfolio" data-i18n="cta1">控股企业</a>
+    <a class="btn s" href="#contact" data-i18n="cta2">联系我们</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <div class="head">
+    <div class="no reveal">01 — ABOUT</div>
+    <div class="reveal"><h2 data-i18n="s1t">长期资本，深度赋能</h2>
+    <p data-i18n="s1d">我们相信，真正改变世界的技术需要耐心。Chaos Capital 以控股方式长期持有优质科技企业，在资本、治理与战略上提供持续支持。</p></div>
+  </div>
+  <div class="pillars">
+    <div class="pillar reveal"><div class="i">I</div><h3 data-i18n="a1t">长期主义</h3><p data-i18n="a1d">不追逐短期波动，以十年为尺度衡量价值，与企业共同成长。</p></div>
+    <div class="pillar reveal"><div class="i">II</div><h3 data-i18n="a2t">聚焦科技</h3><p data-i18n="a2d">专注人工智能等前沿技术领域，投资具备核心技术壁垒的团队。</p></div>
+    <div class="pillar reveal"><div class="i">III</div><h3 data-i18n="a3t">稳健治理</h3><p data-i18n="a3d">建立清晰的治理结构与风控体系，为企业发展提供坚实基础。</p></div>
+  </div>
+</div></section>
+
+<section id="portfolio"><div class="wrap">
+  <div class="head">
+    <div class="no reveal">02 — PORTFOLIO</div>
+    <div class="reveal"><h2 data-i18n="s2t">控股企业</h2>
+    <p data-i18n="s2d">我们控股并长期支持的科技企业。</p></div>
+  </div>
+  <div class="holding reveal">
+    <div class="l">
+      <div class="badge" data-i18n="badge">控股子公司</div>
+      <h3>ChaosTech</h3>
+      <p data-i18n="ctd">专注大模型与多模态生成技术，覆盖数据、训练、评测到部署的完整链路，把前沿 AI 变成可靠的产品能力。</p>
+      <div class="meta">
+        <div><small data-i18n="m1">领域</small><b data-i18n="m1v">人工智能</b></div>
+        <div><small data-i18n="m2">关系</small><b data-i18n="m2v">控股</b></div>
+      </div>
+      <a class="more" href="https://chaostech.pages.dev" target="_blank" rel="noopener" data-i18n="visit">访问 ChaosTech →</a>
+    </div>
+    <div class="r"><span>ChaosTech</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div class="no reveal" style="font-family:var(--serif);color:var(--gold);letter-spacing:3px;font-size:14px">03 — CONTACT</div>
+  <h2 class="reveal" data-i18n="s3t">与我们对话</h2>
+  <p class="reveal" data-i18n="s3d">投资合作、战略交流，欢迎来信。</p>
+  <a class="btn s reveal" href="mailto:contact@chaoscapital.com">contact@chaoscapital.com</a>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© <span id="y"></span> Chaos Capital</span>
+  <span data-i18n="foot">在不确定中，投资确定的未来</span>
+</div></footer>
+
+<script>
+const T={en:{nav1:"About",nav2:"Portfolio",nav3:"Contact",h1a:"Amid uncertainty,",h1b:"we invest in a certain future",
+sub:"Chaos Capital is a holding company focused on frontier technology, providing long-term capital and strategic support to help technology companies grow through every cycle.",
+cta1:"Portfolio",cta2:"Contact us",s1t:"Long-term capital, deep support",
+s1d:"We believe world-changing technology takes patience. Chaos Capital holds controlling stakes in exceptional technology companies for the long term, supporting them in capital, governance and strategy.",
+a1t:"Long-term view",a1d:"We look past short-term swings and measure value in decades, growing alongside our companies.",
+a2t:"Technology focus",a2d:"We concentrate on frontier fields such as artificial intelligence, backing teams with deep technical moats.",
+a3t:"Sound governance",a3d:"Clear governance and risk management give our companies a solid foundation to build on.",
+s2t:"Portfolio",s2d:"Technology companies we hold and support for the long term.",badge:"SUBSIDIARY",
+ctd:"Large-model and multimodal generation technology across the full pipeline — data, training, evaluation and deployment — turning frontier AI into dependable product capabilities.",
+m1:"SECTOR",m1v:"Artificial Intelligence",m2:"RELATIONSHIP",m2v:"Controlling stake",visit:"Visit ChaosTech →",
+s3t:"Start a conversation",s3d:"For investment partnerships and strategic dialogue, we'd love to hear from you.",foot:"Amid uncertainty, we invest in a certain future"}};
+const zh={};document.querySelectorAll('[data-i18n]').forEach(e=>zh[e.dataset.i18n]=e.textContent);T.zh=zh;
+let cur='zh';try{cur=localStorage.getItem('lang')||(navigator.language.startsWith('zh')?'zh':'en')}catch(e){}
+function setLang(l){cur=l;document.documentElement.lang=l==='zh'?'zh-CN':'en';document.querySelectorAll('[data-i18n]').forEach(e=>{const v=T[l][e.dataset.i18n];if(v)e.textContent=v});
+document.getElementById('lang').textContent=l==='zh'?'EN':'中文';try{localStorage.setItem('lang',l)}catch(e){}}
+document.getElementById('lang').onclick=()=>setLang(cur==='zh'?'en':'zh');setLang(cur);
+document.getElementById('y').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
